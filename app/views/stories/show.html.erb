@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @story.image %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @story.user %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<% if user_signed_in? %>
+  <%= link_to 'Back', stories_path %>
+<% else %>
+  <%= link_to 'Back', root_path %>
+<% end %>
